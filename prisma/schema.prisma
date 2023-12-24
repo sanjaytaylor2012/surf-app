@@ -1,0 +1,38 @@
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Day {
+  id String @id @default(uuid())
+  date DateTime @unique
+  hours Hour[]
+}
+
+model Hour {
+  id String @id @default(uuid())
+  hourNumber Int
+
+  airTempurature Float
+  gust Float
+  precipitation Float
+  waterTemperature Float
+  waveDirection Float
+  waveHeight Float
+  wavePeriod Float
+  windDirection Float
+  windSpeed Float
+  swellHeight Float
+  swellPeriod Float
+
+  dayId String
+  day Day @relation(fields: [dayId], references: [id], onDelete: Cascade)
+
+  @@index([dayId])
+
+}
