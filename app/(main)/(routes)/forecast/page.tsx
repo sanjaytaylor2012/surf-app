@@ -3,7 +3,7 @@ import { LiveView } from "@/components/liveView/live-view";
 import { Day } from "@prisma/client";
 
 const getData = async () => {
-  const response = await fetch("http://localhost:5000/forecast", {
+  const response = await fetch("https://surf-app-411a8.web.app/forecast", {
     method: "GET",
     cache: "no-store",
   });
