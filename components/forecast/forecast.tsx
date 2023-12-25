@@ -14,7 +14,7 @@ export const Forecast = ({ week }: ForecastProps) => {
         return (
           <div
             key={day.id}
-            className="flex mb-4 pb-4  w-full h-[500px] xl:h-[250px] rounded-3xl bg-[#3a3a3c] "
+            className="flex mb-4 pb-4 w-full h-[500px] xl:h-[250px] rounded-3xl bg-[#3a3a3c] "
           >
             <WeekWaveHeightDetails day={day} />
           </div>
