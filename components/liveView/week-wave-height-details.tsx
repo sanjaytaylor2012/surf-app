@@ -41,12 +41,12 @@ export const WeekWaveHeightDetails = ({ day }: WeekWaveHeightDetailsProps) => {
       //@ts-ignore
       hourNumber: timeMap[hourNumber.toString()],
       waveHeight,
-      waveHeightLabel: waveHeight.toFixed(2),
+      waveHeightLabel: waveHeight.toFixed(1),
     };
   });
 
   return (
-    <div className="flex w-full h-[300px] flex-col pr-8 pt-4">
+    <div className="flex w-full h-full flex-col pr-8 pt-4">
       <p className="ml-6 font-semibold">
         {
           //@ts-ignore

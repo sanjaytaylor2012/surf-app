@@ -49,7 +49,7 @@ export const DailyWaveHeightDetails = ({
   });
 
   return (
-    <div className="flex w-full flex-col pr-4 pt-4">
+    <div className="flex w-full h-full flex-col pr-4 pt-4">
       <p className="ml-6 font-semibold">Wave Height</p>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart id={"waves bitch"} data={hours}>
