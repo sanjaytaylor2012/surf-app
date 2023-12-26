@@ -3,10 +3,15 @@ import { LiveView } from "@/components/liveView/live-view";
 import { Day } from "@prisma/client";
 
 const getData = async () => {
-  const response = await fetch("https://surf-app-411a8.web.app/forecast", {
-    method: "GET",
-    cache: "no-store",
-  });
+  const response = await fetch(
+    "https://surf-app-411a8.web.app/forecast",
+    // "http:localhost:5000/forecast",
+
+    {
+      method: "GET",
+      cache: "no-store",
+    }
+  );
   const week = await response.json();
   return week.week;
 };

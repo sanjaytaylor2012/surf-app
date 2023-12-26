@@ -6,13 +6,14 @@ import { CurrentWaveDetails } from "./current-wave-details";
 import { CurrentWindDetails } from "./current-wind-details";
 import { CurrentTideDetails } from "./current-tide-details";
 import { Day, Hour } from "@prisma/client";
-import { DayWithHours } from "@/types";
+import { DayWithHoursWithTides } from "@/types";
 import { CurrentWeatherDetails } from "./current-weather-details";
 import { DailyWaveHeightDetails } from "./daily-wave-height-details";
-import { DailyTideDetails } from "./daily-tide-details";
+import { DailySwellDetails } from "./daily-swell-details";
+import { DailyTideDetails } from "./daily-tide-detials";
 
 interface LiveViewProps {
-  data: DayWithHours;
+  data: DayWithHoursWithTides;
 }
 
 export const LiveView = ({ data }: LiveViewProps) => {
@@ -85,6 +86,9 @@ export const LiveView = ({ data }: LiveViewProps) => {
         <div className="flex w-full h-[200px] xl:h-[250px] rounded-3xl bg-[#3a3a3c] ">
           <DailyWaveHeightDetails day={data} />
         </div>
+      </div>
+      <div className="flex h-[200px] xl:h-[250px]  mb-4 pb-4 w-full  flex-grow  rounded-3xl bg-[#3a3a3c] ">
+        <DailySwellDetails day={data} />
       </div>
       <div className="flex h-[200px] xl:h-[250px]  mb-4 pb-4 w-full  flex-grow  rounded-3xl bg-[#3a3a3c] ">
         <DailyTideDetails day={data} />

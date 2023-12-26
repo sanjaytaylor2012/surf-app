@@ -1,5 +1,6 @@
-import { Day, Hour } from "@prisma/client";
+import { Day, Hour, Tide } from "@prisma/client";
 
-export type DayWithHours = Day & {
+export type DayWithHoursWithTides = Day & {
   hours: Hour[];
+  tides: Tide[];
 };

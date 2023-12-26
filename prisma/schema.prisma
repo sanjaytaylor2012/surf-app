@@ -12,6 +12,20 @@ model Day {
   id String @id @default(uuid())
   date DateTime @unique
   hours Hour[]
+  tides Tide[]
+}
+
+model Tide {
+  id String @id @default(uuid())
+  height Float
+  type String
+  time DateTime
+
+  dayId String
+  day Day @relation(fields: [dayId], references: [id], onDelete: Cascade)
+
+  @@index([dayId])
+
 }
 
 model Hour {
