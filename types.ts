@@ -7,5 +7,4 @@ export type DayWithHoursWithTides = Day & {
 
 export type DayWithHours = Day & {
   hours: Hour[];
-  tides: Tide[];
 };
