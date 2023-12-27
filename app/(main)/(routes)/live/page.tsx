@@ -3,8 +3,9 @@ import { Day } from "@prisma/client";
 
 const getData = async () => {
   const response = await fetch(
-    "https://surf-app-411a8.web.app/live",
+    "https://us-central1-surf-app2-6e21e.cloudfunctions.net/app/live",
     // "http://localhost:5000/live",
+    // "http://127.0.0.1:5001/surf-app2-6e21e/us-central1/app/live",
 
     {
       method: "GET",
@@ -13,7 +14,6 @@ const getData = async () => {
   );
   const jsonData = await response.json();
   const day = await jsonData.closestDay;
-
   return day;
 };
 

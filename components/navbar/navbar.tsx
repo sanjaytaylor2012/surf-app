@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export const Navbar = () => {
   const simulateFetch = async () => {
     const response = await fetch(
-      "https://surf-app-411a8.web.app/simulate_fetch",
+      "https://us-central1-surf-app2-6e21e.cloudfunctions.net/app/simulate_fetch",
       // "http://localhost:5000/simulate_fetch",
       {
         method: "GET",
@@ -35,9 +35,9 @@ export const Navbar = () => {
           Forecast
         </p>
       </div>
-      <Button className="h-5" onClick={simulateFetch}>
+      {/* <Button className="h-5" onClick={simulateFetch}>
         Simulate Fetch
-      </Button>
+      </Button> */}
       <Palmtree className="text-[#8884d8]" />
     </div>
   );

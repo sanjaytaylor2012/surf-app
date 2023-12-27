@@ -65,7 +65,7 @@ export const DailyTideDetails = ({ day }: DailyTideDetailsProps) => {
           <YAxis />
           <XAxis dataKey="time" domain={["dataMin", "dataMax"]} />
 
-          <CartesianGrid strokeDasharray="3 3" />
+          {/* <CartesianGrid strokeDasharray="3 3" /> */}
 
           <Area
             type="monotone"

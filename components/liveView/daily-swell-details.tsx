@@ -52,7 +52,7 @@ export const DailySwellDetails = ({ day }: DailySwellDetailsProps) => {
           <XAxis dataKey={"hourNumber"} />
           <YAxis />
 
-          <CartesianGrid strokeDasharray="3 3" />
+          {/* <CartesianGrid strokeDasharray="3 3" /> */}
 
           <Area
             type="monotone"
