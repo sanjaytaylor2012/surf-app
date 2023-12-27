@@ -4,3 +4,8 @@ export type DayWithHoursWithTides = Day & {
   hours: Hour[];
   tides: Tide[];
 };
+
+export type DayWithHours = Day & {
+  hours: Hour[];
+  tides: Tide[];
+};
