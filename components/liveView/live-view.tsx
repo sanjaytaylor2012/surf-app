@@ -45,7 +45,7 @@ export const LiveView = ({ data }: LiveViewProps) => {
 
   return (
     <div
-      className="w-full h-full flex flex-col   mt-10    gap-y-4 mb-4
+      className="w-full h-full flex flex-col   mt-10   gap-y-4
     "
     >
       <p className="font-semibold">
@@ -63,7 +63,7 @@ export const LiveView = ({ data }: LiveViewProps) => {
       </p>
 
       <div
-        className="flex w-full gap-y-4 md:gap-y-0 sm:flex-row flex-col gap-x-4 
+        className="  flex w-full gap-y-4 md:gap-y-0 sm:flex-row flex-col gap-x-4 
       justify-between"
       >
         <div className="flex w-full h-[200px] xl:h-[250px] rounded-3xl bg-[#3a3a3c] ">
@@ -78,7 +78,7 @@ export const LiveView = ({ data }: LiveViewProps) => {
       </div>
       <div
         className="flex w-full gap-y-4 md:gap-y-0  sm:flex-row flex-col gap-x-4 
-      justify-around"
+      justify-around "
       >
         <div className="flex w-full sm:w-1/3 h-[200px] xl:h-[250px] rounded-3xl bg-[#3a3a3c] ">
           <CurrentWeatherDetails closestHour={closestHour} />
@@ -87,10 +87,10 @@ export const LiveView = ({ data }: LiveViewProps) => {
           <DailyWaveHeightDetails day={data} />
         </div>
       </div>
-      <div className="flex h-[200px] xl:h-[250px]  mb-4 pb-4 w-full  rounded-3xl bg-[#3a3a3c] ">
+      <div className="flex h-[200px]  xl:h-[250px] pb-4 w-full  rounded-3xl bg-[#3a3a3c] ">
         <DailySwellDetails day={data} />
       </div>
-      <div className="flex h-[200px] xl:h-[250px]  mb-4 pb-4 w-full  rounded-3xl bg-[#3a3a3c] ">
+      <div className="flex h-[350px] xl:h-[400px]  mb-4 pb-4 w-full  rounded-3xl bg-[#3a3a3c] ">
         <DailyTideDetails day={data} />
       </div>
     </div>

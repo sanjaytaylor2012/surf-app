@@ -52,7 +52,7 @@ export const DailyTideDetails = ({ day }: DailyTideDetailsProps) => {
   });
 
   return (
-    <div className="flex w-full  pr-8 pt-4 flex-col h-[200px] xl:h-[250px] ">
+    <div className="flex w-full  pr-8 pt-4 flex-col h-[300px] xl:h-[350px] ">
       <p className="ml-6 font-semibold">Tide Height</p>
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart id={"swell bitch"} data={data}>
@@ -68,6 +68,7 @@ export const DailyTideDetails = ({ day }: DailyTideDetailsProps) => {
           {/* <CartesianGrid strokeDasharray="3 3" /> */}
 
           <Area
+            label={{ position: "top" }}
             type="monotone"
             dataKey="height"
             stroke="#FFFFFF"
