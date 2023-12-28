@@ -1,5 +1,6 @@
 import { LiveView } from "@/components/liveView/live-view";
 import { Day } from "@prisma/client";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 
 const getData = async () => {
   const response = await fetch(

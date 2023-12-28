@@ -11,6 +11,7 @@ import { CurrentWeatherDetails } from "./current-weather-details";
 import { DailyWaveHeightDetails } from "./daily-wave-height-details";
 import { DailySwellDetails } from "./daily-swell-details";
 import { DailyTideDetails } from "./daily-tide-detials";
+import { ScrollArea } from "../ui/scroll-area";
 
 interface LiveViewProps {
   data: DayWithHoursWithTides;
@@ -45,7 +46,7 @@ export const LiveView = ({ data }: LiveViewProps) => {
 
   return (
     <div
-      className="w-full h-full flex flex-col   mt-10   gap-y-4
+      className="w-full h-full flex flex-col  mt-10  gap-y-4 
     "
     >
       <p className="font-semibold">
@@ -90,9 +91,10 @@ export const LiveView = ({ data }: LiveViewProps) => {
       <div className="flex h-[200px]  xl:h-[250px] pb-4 w-full  rounded-3xl bg-[#3a3a3c] ">
         <DailySwellDetails day={data} />
       </div>
-      <div className="flex h-[350px] xl:h-[400px]  mb-4 pb-4 w-full  rounded-3xl bg-[#3a3a3c] ">
+      <div className="flex h-[350px] xl:h-[400px] pb-4 w-full  rounded-3xl bg-[#3a3a3c] ">
         <DailyTideDetails day={data} />
       </div>
+      <p className="mb-4 text-[#2c2c2e]">Not Surfline</p>
     </div>
   );
 };

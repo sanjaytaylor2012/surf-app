@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar/navbar";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const MainLayout = async ({ children }: { children: React.ReactNode }) => {
   return (

@@ -20,6 +20,7 @@ export const Forecast = ({ week }: ForecastProps) => {
           </div>
         );
       })}
+      <p className="mb-4 text-[#2c2c2e]">Not Surfline</p>
     </div>
   );
 };
