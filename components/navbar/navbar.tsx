@@ -2,6 +2,7 @@
 import { Menu, Palmtree } from "lucide-react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import { UserButton } from "@clerk/nextjs";
 
 export const Navbar = () => {
   const simulateFetch = async () => {
@@ -38,7 +39,7 @@ export const Navbar = () => {
       {/* <Button className="h-5" onClick={simulateFetch}>
         Simulate Fetch
       </Button> */}
-      <Palmtree className="text-[#8884d8]" />
+      <UserButton afterSignOutUrl="/" />
     </div>
   );
 };
