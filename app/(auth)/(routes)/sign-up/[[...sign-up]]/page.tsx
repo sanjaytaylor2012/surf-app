@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-const SignUp = () => {
+export const SignUp = () => {
   return redirect("/sign-in");
 };
