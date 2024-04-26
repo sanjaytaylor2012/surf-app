@@ -4,7 +4,7 @@ import { Day } from "@prisma/client";
 
 const getData = async () => {
   const response = await fetch(
-    "https://us-central1-surf-app2-6e21e.cloudfunctions.net/app-2/forecast",
+    "https://us-central1-surf-app2-6e21e.cloudfunctions.net/app-3/forecast",
     // "http:localhost:5000/forecast",
     // "http://127.0.0.1:5001/surf-app2-6e21e/us-central1/app/forecast",
 
